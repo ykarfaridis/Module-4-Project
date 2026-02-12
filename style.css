@@ -14,6 +14,7 @@
     filter: invert(1);
     overflow: none;
     padding-top: 30px;
+    animation: twinkle 1.5s ease-in-out infinite;
 }
 
 
@@ -165,6 +166,18 @@ section {
     100% {
         transform: scale(2);
         opacity: 0;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
