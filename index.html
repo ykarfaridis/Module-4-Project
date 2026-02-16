@@ -25,7 +25,7 @@
                 <img id="personal-logo" src="YK-logo-white.png" alt="Yanni Karfaridis Logo">
             </figure>
            <ul class="nav__link--list">
-           <li class="nav__link">
+           <li class="nav__link" onclick="toggleModal()">
             <a href="#" class="
             nav__link--anchor
             link__hover-effect
@@ -39,7 +39,7 @@
             link__hover-effect--black
             ">Projects</a>
            </li>
-           <li class="nav__link">
+           <li class="nav__link" onclick="toggleModal()">
             <a href="#" class="
             nav__link--anchor
             link__hover-effect
@@ -61,7 +61,7 @@
     <h1 class="title red">I'm Yanni. </h1>
     <p class="header__para">I am a <b class="red">Frontend Software Engineer</b> who builds at the intersection of high-performance logic and intuitive user experience.
         <br>
-        Here's a bit more <b class="red">about me</b>.
+        Here's a bit more <b class="red click" onclick="toggleModal()">about me</b>.
     </p>
     <div class="social__list">
         <a href="https://www.linkedin.com/in/yanni-karfaridis/" target="_blank" class="social__link click"><i class="fa-brands fa-square-linkedin"></i></a>  
@@ -70,7 +70,7 @@
     </div>
 </div>
         </header>
-        <button class="mail__btn click"><i class="fa-solid fa-at"></i></button>
+        <button class="mail__btn click" onclick="toggleModal()"><i class="fa-solid fa-at"></i></button>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click">
                 <i class="fa-regular fa-star"></i>
@@ -104,12 +104,13 @@
         </div>
             </div>
             <div class="modal__half modal__contact">
+                            <i class="fa-solid fa-x modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">Let's Connect!</h3>
                 <h4 class="modal__subtitle modal__subtitle--contact">I'm always open to new opportunities.</h4>
                 <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name ="user_name" type="text" ></input>
+                        <input class="input" name ="user_name" type="text" required></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
@@ -130,7 +131,7 @@
                     Thanks for reaching out! Looking forward to speaking with you soon.
                 </div>
             </div>
-            <i class="fa-solid fa-x modal__exit click"></i>
+
         </div>
     </section>
     <section id="projects">

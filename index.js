@@ -22,3 +22,14 @@ loading.classList.remove("modal__overlay--visible");
 alert("Email service is currently unavailable. Please contact me directly at ykarfaridis@gmail.com")
     });
 }
+
+
+let isModalOpen = false;
+function toggleModal(){
+    if (isModalOpen) {
+        isModalOpen = false;
+       return document.body.classList.remove("modal--open");
+    }
+        isModalOpen = true;
+        document.body.classList += " modal--open";
+    }
