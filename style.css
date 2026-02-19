@@ -7,6 +7,9 @@
     font-family: "Roboto", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 #personal-logo{
     width: 80px;
@@ -246,6 +249,9 @@ color: white;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    z-index: 100;
+    position: fixed;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.28);
 }
 
 .scroll{
@@ -628,6 +634,7 @@ footer {
     background-color: #242424;
     display: flex;
     padding: 6% 0   ;
+    position: relative;
 }
 
 
@@ -660,4 +667,137 @@ footer {
     color: #fff;
     margin-top: 16px;
     font-size: 16px;
+}
+
+
+/* Shapes */
+
+:root {
+    --shape-outline: #242424;
+
+}
+
+.dark-theme {
+    --shape-outline: #ffffff;
+}
+
+.shape {
+        position: fixed;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
+}
+
+/* Per-shape hue shifts to create a rainbow palette while keeping a contrasting outline */
+.shape--0 { filter: hue-rotate(0deg) ; }
+.shape--1 { filter: hue-rotate(40deg) ; }
+.shape--2 { filter: hue-rotate(80deg) ; }
+.shape--3 { filter: hue-rotate(120deg) ; }
+.shape--4 { filter: hue-rotate(160deg) ; }
+.shape--5 { filter: hue-rotate(200deg) ; }
+.shape--6 { filter: hue-rotate(240deg) ; }
+.shape--7 { filter: hue-rotate(280deg) ; }
+.shape--8 { filter: hue-rotate(320deg) ; }
+
+
+
+
+/* Responsiveness */
+
+/* small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+.title {
+    font-size: 80px;
+}
+
+.header__para {
+    font-size: 20px;
+}
+
+.modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+}
+
+.modal__half {
+    width: 100%;
+}
+}
+
+/* small phones */
+
+
+@media (max-width: 480px) {
+.title {
+    font-size: 52px;
+}
+
+.header__para {
+    font-size: 18px;
+}
+.nav__link:first-child {
+    display: none;
+}
+
+.project__description--para {
+    display: none;
+}
+
+.project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.project__description--sub-title {
+    margin-bottom: 8px;
+}
+
+.modal__half {
+    padding: 40px;
+}
 }
